@@ -211,16 +211,16 @@ graph TD
 
 ### Code Quality Features
 - **Modular Design**: Separate modules for preprocessing, training, and evaluation
-- **Reusable Components**: Custom transformers and evaluation functions
-- **Error Handling**: Robust error handling throughout the pipeline
-- **Documentation**: Comprehensive docstrings and comments
-- **Type Hints**: Python type annotations for better code clarity
+- **Reusable Components**: Custom transformers (`DataCleaner`, `FeatureEngineer`) and evaluation functions
+- **Error Handling**: Basic error handling with warnings suppression for XGBoost
+- **Documentation**: Comprehensive docstrings and inline comments
+- **Clean Architecture**: Pipeline-based approach using scikit-learn's Pipeline and ColumnTransformer
 
 ### Performance Optimizations
-- **Parallel Processing**: Multi-threaded hyperparameter tuning
-- **Memory Efficiency**: Streaming data processing for large datasets
-- **Caching**: Intermediate results caching for faster iterations
-- **Vectorization**: NumPy/Pandas vectorized operations
+- **Parallel Processing**: Multi-threaded hyperparameter tuning with `n_jobs=-1`
+- **Memory Efficiency**: Efficient data processing with pandas and numpy
+- **Vectorization**: NumPy/Pandas vectorized operations for data cleaning and feature engineering
+- **Cross-Validation**: Stratified K-Fold cross-validation for robust model evaluation
 
 ## Future Improvements
 
