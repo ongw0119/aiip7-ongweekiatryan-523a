@@ -2,6 +2,10 @@
 Model evaluation utilities for the gas monitoring ML pipeline.
 """
 
+import os
+# Set matplotlib backend before any other imports to avoid tkinter threading issues
+os.environ['MPLBACKEND'] = 'Agg'
+
 import numpy as np
 from sklearn.metrics import (
     classification_report, 
@@ -12,6 +16,9 @@ from sklearn.metrics import (
     f1_score,
     roc_auc_score
 )
+import matplotlib
+# Set non-interactive backend to avoid tkinter threading issues
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 

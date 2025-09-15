@@ -1,9 +1,17 @@
 
+import os
+# Set matplotlib backend before any other imports to avoid tkinter threading issues
+os.environ['MPLBACKEND'] = 'Agg'
+
 import sqlite3
 import argparse
 import pandas as pd
 import numpy as np
 import warnings
+
+# Set matplotlib backend to avoid tkinter threading issues
+import matplotlib
+matplotlib.use('Agg')
 
 warnings.filterwarnings("ignore", category=UserWarning, module="xgboost")
 try:
